@@ -12,7 +12,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-db_string = "postgres://biver:1234@localhost:5432/compose"
+db_string = "postgres://izgvfzontulskw:f4e202f9da2a1a5ee267e359a8ddfe2219603d482992c9d60945b4c86d9b3308@ec2-50-19-95-77.compute-1.amazonaws.com:5432/d6e7e42vhljlc9"
 
 db = create_engine(db_string)  
 base = declarative_base()
@@ -43,7 +43,6 @@ elif mode == "prod":
     def run(updater):
         PORT = int(os.environ.get("PORT", "8443"))
         HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
-        # Code from https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku
         updater.start_webhook(listen="0.0.0.0",
                               port=PORT,
                               url_path=TOKEN)

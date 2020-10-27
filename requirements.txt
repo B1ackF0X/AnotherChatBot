@@ -1,6 +1,6 @@
 certifi==2019.9.11
 cffi==1.13.2
-cryptography==2.8
+cryptography==3.2
 future==0.18.2
 psycopg2-binary==2.8.4
 pycparser==2.19
